@@ -14,3 +14,4 @@ email: mauriurraco@gmail.com
 # gplus_username:  lorem_ipsum
 
 exclude: ['package.json', 'src' , 'node_modules']
+permalink: /blog/:year/:month/:day/:title
