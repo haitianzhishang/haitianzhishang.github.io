@@ -1,0 +1,21 @@
+<section class="hero is-fullheight has-text-centered" id="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title has-text-white is-size-1 is-uppercase has-text-weight-bold">
+        {{site.title}}
+      </h1>
+      <h3 class="subtitle has-text-white-bis is-uppercase has-text-weight-medium is-marginless">
+        {{site.description}}
+      </h3>
+      <hr>
+      <div class="column is-full is-size-1">
+        {% unless site.linkedin_username ==  %}
+        <a href="http://www.linkedin.com/in/{{site.linkedin_username}}" target="_blank" class="has-text-white"><i class="fab fa-linkedin"></i></a>
+        {% endunless %}
+        {% unless site.github_username ==  %}
+        <a href="http://www.github.com/{{site.github_username}}" target="_blank" class="has-text-white"><i class="fab fa-github"></i></a>
+        {% endunless %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,86 @@
+markdown: kramdown
+# URL of the Site
+url: ''
+# Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
+baseurl: 
+
+# Title of the Site
+title: Hi, it's vayne
+# Description of the Site
+description: Recording study work and life
+# URL of Image of the Site
+site-image: 
+# Keywords of the Site
+site-keywords: Site, Template, Theme
+# URL for the Image of custom Favicon
+favicon-url: 
+
+# Home page 
+heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+
+# Social Media and Contact
+email: chen1408@e.ntu.edu.sg
+# facebook_username: 
+# twitter_username: 
+# instagram_username: 
+linkedin_username: chenxiaowei1998
+github_username:  haitianzhishang
+# youtube_channel_id: 
+# reddit_username: 
+# behance_username: 
+# dribbble_username: 
+# spotify_username: 
+
+# Google Analytics
+# google-analytics: 
+
+# Disqus
+# disqus-shortname: 
+
+
+# SASS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Build settings
+plugins:
+  - jekyll-admin
+  - jekyll-feed
+
+# Permalink
+permalink: "blog/:title"
+
+# Compress
+compress_html:
+  clippings: all
+
+# Defaults
+defaults:
+  -
+    scope:
+      type: 'posts'
+    values:
+      layout: post
+      post-image: ""
+      description: ""
+      tags:
+        - ""
+  -
+    scope:
+      type: 'pages'
+    values:
+      layout: page
+
+# Exclude
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
