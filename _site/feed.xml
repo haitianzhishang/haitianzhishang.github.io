@@ -1,1 +1,180 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-22T21:11:02-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hi, it’s vayne</title><subtitle>Recording study work and life</subtitle><entry><title type="html">First Blog</title><link href="http://localhost:4000/blog/First_Blog" rel="alternate" type="text/html" title="First Blog" /><published>2022-02-21T00:00:00-08:00</published><updated>2022-02-21T00:00:00-08:00</updated><id>http://localhost:4000/blog/First_Blog</id><content type="html" xml:base="http://localhost:4000/blog/First_Blog"><![CDATA[<p>Dogs and Cats</p>]]></content><author><name></name></author><category term="Daily" /><summary type="html"><![CDATA[Create my own website and upload the first blog]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-25T10:20:46+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hi, it’s vayne</title><subtitle>Recording study work and life</subtitle><entry><title type="html">MIPS CPU</title><link href="http://localhost:4000/blog/MIPS_CPU" rel="alternate" type="text/html" title="MIPS CPU" /><published>2022-02-24T00:00:00+08:00</published><updated>2022-02-24T00:00:00+08:00</updated><id>http://localhost:4000/blog/MIPS_CPU</id><content type="html" xml:base="http://localhost:4000/blog/MIPS_CPU"><![CDATA[<h1 id="mips-cpu-architecture">MIPS CPU Architecture</h1>
+
+<hr />
+<h2 id="instruction-filed">Instruction filed</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">OP</th>
+      <th style="text-align: center">RS</th>
+      <th style="text-align: center">RT</th>
+      <th style="text-align: center">RD</th>
+      <th style="text-align: center">Shamt</th>
+      <th style="text-align: center">Funct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">6bits</td>
+      <td style="text-align: center">5bits</td>
+      <td style="text-align: center">5bits</td>
+      <td style="text-align: center">5bits</td>
+      <td style="text-align: center">5bits</td>
+      <td style="text-align: center">6bits</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>OP: Operation of the instruction</p>
+
+<p>RS: First register source operand</p>
+
+<p>RT: Second register source operand</p>
+
+<p>RD:Register destination operand</p>
+
+<p>Shamt: Shift amount</p>
+
+<p>Funct: Function filed(select specific variant of opcode)</p>
+
+<h2 id="operand-and-address-mode">Operand and Address mode</h2>
+
+<h3 id="two-operands-32-registers-and-230-memory">Two operands: 32 registers and 2^30 memory</h3>
+<h3 id="address-mode">Address mode</h3>
+<p>Register direct mode: RS the first register source operand is the address of operand register</p>
+
+<p>Immediate mode: {RD, Shamt, Funct} is the address of the operand memory</p>
+
+<p>Displacement mode: {RD, Shamt, Funct} + value stored in the RS register is the address of the operand memory</p>
+
+<p>PC-relative mode: {RD, Shamt, Funct} + value stored in the PC register is the address of the operand memory</p>
+
+<h2 id="instruction-type">Instruction Type</h2>
+
+<h3 id="r-type">R-type</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">OP</th>
+      <th style="text-align: center">RS</th>
+      <th style="text-align: center">RT</th>
+      <th style="text-align: center">RD</th>
+      <th style="text-align: center">Shamt</th>
+      <th style="text-align: center">Funct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">6bits</td>
+      <td style="text-align: center">5bits</td>
+      <td style="text-align: center">5bits</td>
+      <td style="text-align: center">5bits</td>
+      <td style="text-align: center">5bits</td>
+      <td style="text-align: center">6bits</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Use three registers as operand to do logic operation</p>
+
+<p>For example</p>
+
+<p><code class="language-plaintext highlighter-rouge">$t0 &lt;- $s1 + $s2</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">add $t0, $s1, $s2</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">OP</th>
+      <th style="text-align: center">RS</th>
+      <th style="text-align: center">RT</th>
+      <th style="text-align: center">RD</th>
+      <th style="text-align: center">Shamt</th>
+      <th style="text-align: center">Funct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">000000</td>
+      <td style="text-align: center">10001</td>
+      <td style="text-align: center">10010</td>
+      <td style="text-align: center">01000</td>
+      <td style="text-align: center">00000</td>
+      <td style="text-align: center">100000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="i-type">I-type</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">OP</th>
+      <th style="text-align: center">RS</th>
+      <th style="text-align: center">RT</th>
+      <th style="text-align: center">Immed address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">6bits</td>
+      <td style="text-align: center">5bits</td>
+      <td style="text-align: center">5bits</td>
+      <td style="text-align: center">16bits</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Use two registers and an immediate address to do data transfer</p>
+
+<p>For example</p>
+
+<p><code class="language-plaintext highlighter-rouge">Load Memory[$s2+40] to $t0</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">lw $t0, 40($s2)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">OP</th>
+      <th style="text-align: center">RS</th>
+      <th style="text-align: center">RT</th>
+      <th style="text-align: center">Immed address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">100011</td>
+      <td style="text-align: center">10010</td>
+      <td style="text-align: center">01000</td>
+      <td style="text-align: center">0000000000101000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="j-type">J-type</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">OP</th>
+      <th style="text-align: center">address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">6bits</td>
+      <td style="text-align: center">26bits</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Use for instruction jumping</p>
+
+<p>The address of the instruction jump into is the sum of  4 MSB of PC and shifted 2 bits address</p>
+
+<p><code class="language-plaintext highlighter-rouge">Next instruction address = PC[31:28]+ address&gt;&gt;2</code></p>]]></content><author><name></name></author><category term="Digital IC Design" /><summary type="html"><![CDATA[Review MIPS CPU Architecture]]></summary></entry><entry><title type="html">First Blog</title><link href="http://localhost:4000/blog/First_Blog" rel="alternate" type="text/html" title="First Blog" /><published>2022-02-23T00:00:00+08:00</published><updated>2022-02-23T00:00:00+08:00</updated><id>http://localhost:4000/blog/First_Blog</id><content type="html" xml:base="http://localhost:4000/blog/First_Blog"><![CDATA[<p>Dogs and Cats</p>]]></content><author><name></name></author><category term="Daily" /><summary type="html"><![CDATA[Create my own website and upload the first blog]]></summary></entry></feed>
