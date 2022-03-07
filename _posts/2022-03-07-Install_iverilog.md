@@ -1,7 +1,7 @@
 ---
-title: MIPS CPU
+title: iverilog install
 layout: post
-post-image: "http://iverilog.icarus.com/_/rsrc/1302225644705/config/customLogo.gif?revision=5"
+post-image: "https://i.ytimg.com/vi/5Kync4z5VOw/mqdefault.jpg"
 description: Install iverilog simulator and gtkwave wave viewer in Ubuntu
 tags:
 - Tools
@@ -58,7 +58,7 @@ sudo apt-get install verilog
 sudo apt-get install gtkwave
 ```
 
-## Detail link
+------
 
-[iverlog]: http://iverilog.icarus.com/	"iverlog official website"
+Details can be found at **[iverilog website](http://iverilog.icarus.com/ )**
 
