@@ -1,7 +1,7 @@
 ---
 title: MIPS CPU
 layout: post
-post-image: "https://ichef.bbci.co.uk/news/976/cpsprodpb/E17D/production/_123352775_ukraine_rebel_held_areas_map_update_22feb2x640-nc.png"
+post-image: "https://dbmoviesblog.files.wordpress.com/2012/02/revolutionary-road-upcoming-movies.jpg"
 description: MIPS CPU Architecture
 tags:
 - Digital IC Design
@@ -10,5 +10,5 @@ tags:
 # MIPS CPU Architecture
 
 ------
-![Architecture](/home/xiaowei/Git/haitianzhishang.github.io/assets/images/MIPS CPU.drawio.png)
+![Architecture](https://github.com/haitianzhishang/MIPS_CPU/blob/main/datasheet/MIPS%20CPU.drawio.png?raw=true)
 
